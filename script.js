@@ -18,6 +18,7 @@ function createNewGrid(size) {
                 once: true
             });
 
+
             row.appendChild(square);
         }
 
@@ -27,13 +28,25 @@ function createNewGrid(size) {
 
 function paintSquareRandom(e){
     const squareRef = e.target;
-    //Choos random color
+    //Make choose color only once
+    squareRef.removeEventListener('mouseover', paintSquareRandom);
+    //Choose random color
     const randRed = getRandomInt(256);
     const randGreen = getRandomInt(256);
     const randBlue = getRandomInt(256);
 
     squareRef.style.backgroundColor = `rgb(${randRed}, ${randGreen}, ${randBlue})`;
     squareRef.style.borderColor = `rgb(${randRed}, ${randGreen}, ${randBlue})`;
+    squareRef.style.opacity = '0.1';
+
+    squareRef.addEventListener('mouseover', darkenColor);
+}
+
+function darkenColor(e) {
+    const squareRef = e.target;
+    let opacity = parseFloat(squareRef.style.opacity);
+    if (opacity < 1) opacity += 0.1;
+    squareRef.style.opacity = `${opacity}`;
 }
 
 function changeSize() {

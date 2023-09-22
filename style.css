@@ -17,10 +17,10 @@ body {
     border: 1px solid lightgray;
 }
 
-.hovered {
+/* .hovered {
     background-color: black;
     border-color: rgb(24, 24, 24);
-}
+} */
 
 #btn {
     display: block;

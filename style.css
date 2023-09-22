@@ -11,8 +11,15 @@ body {
     margin: auto;
 }
 
+.square {
+    flex-grow: 1;
+    aspect-ratio: 1 / 1;
+    border: 1px solid lightgray;
+}
+
 .hovered {
     background-color: black;
+    border-color: rgb(24, 24, 24);
 }
 
 #btn {

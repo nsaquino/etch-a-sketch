@@ -11,10 +11,7 @@ function createNewGrid(size) {
 
         for (let j = 0; j < size; j++) {
             const square = document.createElement('div');
-
-            square.style.flexGrow = 1;
-            square.style.aspectRatio = '1 / 1';
-            square.style.border = '1px solid black';
+            square.classList.add('square');
 
             square.addEventListener('mouseover', () => {
                 square.classList.add('hovered');

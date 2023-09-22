@@ -6,6 +6,12 @@ body {
     margin: 0;
 }
 
+#container {
+    width: 960px;
+    border: 1px solid lightgray;
+    margin: auto;
+}
+
 .hovered {
     background-color: black;
 }

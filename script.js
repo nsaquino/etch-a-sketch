@@ -1,2 +1,17 @@
 const container = document.querySelector('#container');
-console.log(container);
+
+//Create 16x16 grid
+for (let i = 0; i < 16; i++) {
+    const row = document.createElement('div');
+    row.style.display = 'flex';
+
+    for (let j = 0; j < 16; j++) {
+        const square = document.createElement('div');
+        square.style.height = '100px';
+        square.style.flexGrow = 1;
+        square.style.border = '1px solid black';
+        row.appendChild(square);
+    }
+
+    container.appendChild(row);
+}
